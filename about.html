@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | FieldLog Pro</title>
+    <meta name="description" content="Learn about FieldLog Pro - the team behind the simplest pesticide application logging software for landscapers.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="About FieldLog Pro">
+    <meta property="og:description" content="Built by landscapers, for landscapers. Meet the team making compliance simple.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fieldlog.pro/about">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%232ECC71'/><path d='M16 6L10 14h12L16 6z' fill='white'/><rect x='14' y='14' width='4' height='12' fill='white'/></svg>">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --green-primary: #2ECC71;
+            --green-dark: #27AE60;
+            --green-light: #A8E6CF;
+            --blue-secondary: #3498DB;
+            --gray-900: #2C3E50;
+            --gray-700: #34495E;
+            --gray-500: #7F8C8D;
+            --gray-300: #BDC3C7;
+            --gray-100: #ECF0F1;
+            --gray-50: #F8FAFB;
+            --white: #FFFFFF;
+            --shadow-sm: 0 1px 2px rgba(44, 62, 80, 0.05);
+            --shadow-md: 0 4px 12px rgba(44, 62, 80, 0.08);
+            --shadow-lg: 0 12px 40px rgba(44, 62, 80, 0.12);
+            --radius-sm: 6px;
+            --radius-md: 10px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--gray-900);
+            line-height: 1.6;
+            background: var(--white);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(44, 62, 80, 0.06);
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--gray-900);
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--green-primary);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logo-icon::before {
+            content: '';
+            position: absolute;
+            top: 6px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-bottom: 10px solid white;
+        }
+
+        .logo-icon::after {
+            content: '';
+            position: absolute;
+            bottom: 4px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 6px;
+            height: 14px;
+            background: white;
+            border-radius: 1px;
+        }
+
+        .logo-text {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 1.25rem;
+            letter-spacing: -0.02em;
+        }
+
+        .logo-text span {
+            color: var(--green-primary);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-link {
+            padding: 10px 16px;
+            color: var(--gray-700);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.938rem;
+            border-radius: var(--radius-md);
+            transition: all 0.2s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--gray-900);
+            background: var(--gray-100);
+        }
+
+        .nav-cta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-left: 16px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 24px;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 600;
+            font-size: 0.938rem;
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-ghost {
+            color: var(--gray-700);
+            background: transparent;
+        }
+
+        .btn-ghost:hover {
+            color: var(--gray-900);
+            background: var(--gray-100);
+        }
+
+        .btn-primary {
+            color: white;
+            background: var(--green-primary);
+            box-shadow: 0 2px 8px rgba(46, 204, 113, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: var(--green-dark);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 16px rgba(46, 204, 113, 0.4);
+        }
+
+        .btn-large {
+            padding: 16px 32px;
+            font-size: 1rem;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            padding: 8px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .mobile-menu-btn span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--gray-900);
+            border-radius: 2px;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 160px 0 100px;
+            background: linear-gradient(180deg, var(--gray-50) 0%, var(--white) 100%);
+            text-align: center;
+        }
+
+        .hero-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(46, 204, 113, 0.1);
+            color: var(--green-dark);
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 800;
+            color: var(--gray-900);
+            margin-bottom: 24px;
+            letter-spacing: -0.03em;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-title .highlight {
+            color: var(--green-primary);
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--gray-500);
+            max-width: 600px;
+            margin: 0 auto 40px;
+            line-height: 1.7;
+        }
+
+        /* Mission Section */
+        .mission {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .mission-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .mission-content h2 {
+            font-size: 2.25rem;
+            color: var(--gray-900);
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
+        }
+
+        .mission-content p {
+            font-size: 1.125rem;
+            color: var(--gray-700);
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .mission-visual {
+            background: linear-gradient(135deg, rgba(46, 204, 113, 0.1) 0%, rgba(52, 152, 219, 0.08) 100%);
+            border-radius: var(--radius-xl);
+            padding: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mission-icon {
+            font-size: 8rem;
+        }
+
+        /* Story Section */
+        .story {
+            padding: 100px 0;
+            background: var(--gray-50);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--green-primary);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            color: var(--gray-900);
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: var(--gray-500);
+        }
+
+        .story-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .story-block {
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            padding: 48px;
+            margin-bottom: 32px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .story-block h3 {
+            font-size: 1.5rem;
+            color: var(--gray-900);
+            margin-bottom: 16px;
+        }
+
+        .story-block p {
+            font-size: 1.0625rem;
+            color: var(--gray-700);
+            line-height: 1.8;
+        }
+
+        .story-block p + p {
+            margin-top: 16px;
+        }
+
+        /* Values Section */
+        .values {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .value-card {
+            padding: 40px;
+            background: var(--gray-50);
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--gray-100);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .value-card:hover {
+            background: var(--white);
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-4px);
+            border-color: transparent;
+        }
+
+        .value-icon {
+            width: 72px;
+            height: 72px;
+            margin: 0 auto 24px;
+            background: linear-gradient(135deg, var(--green-primary) 0%, var(--green-dark) 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 8px 24px rgba(46, 204, 113, 0.3);
+        }
+
+        .value-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 12px;
+        }
+
+        .value-description {
+            font-size: 1rem;
+            color: var(--gray-500);
+            line-height: 1.6;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background: var(--gray-50);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .contact-info h3 {
+            font-size: 1.5rem;
+            color: var(--gray-900);
+            margin-bottom: 24px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--green-light);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+
+        .contact-text strong {
+            display: block;
+            color: var(--gray-900);
+            margin-bottom: 4px;
+        }
+
+        .contact-text a {
+            color: var(--green-primary);
+            text-decoration: none;
+        }
+
+        .contact-text a:hover {
+            color: var(--green-dark);
+        }
+
+        .contact-text span {
+            color: var(--gray-500);
+            font-size: 0.938rem;
+        }
+
+        .contact-form {
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-md);
+        }
+
+        .contact-form h3 {
+            font-size: 1.25rem;
+            color: var(--gray-900);
+            margin-bottom: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 0.938rem;
+            color: var(--gray-700);
+        }
+
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid var(--gray-100);
+            border-radius: var(--radius-md);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1rem;
+            color: var(--gray-900);
+            transition: all 0.2s ease;
+            background: var(--white);
+        }
+
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--green-primary);
+        }
+
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--gray-900) 0%, #1a252f 100%);
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cta-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: var(--white);
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+        }
+
+        .cta-subtitle {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 40px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-secondary {
+            color: var(--white);
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--white);
+        }
+
+        /* Footer */
+        .footer {
+            padding: 60px 0 40px;
+            background: var(--gray-900);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+
+        .footer-brand {
+            max-width: 280px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+
+        .footer-logo .logo-icon {
+            width: 32px;
+            height: 32px;
+        }
+
+        .footer-logo .logo-text {
+            color: white;
+            font-size: 1.125rem;
+        }
+
+        .footer-tagline {
+            font-size: 0.938rem;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.7;
+        }
+
+        .footer-column h4 {
+            font-size: 0.875rem;
+            font-weight: 700;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            font-size: 0.938rem;
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--green-primary);
+        }
+
+        .footer-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 32px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer-copyright {
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .footer-legal {
+            display: flex;
+            gap: 24px;
+        }
+
+        .footer-legal a {
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .footer-legal a:hover {
+            color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .mission-grid {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+
+            .mission-visual {
+                order: -1;
+            }
+
+            .values-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links,
+            .nav-cta {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: flex;
+            }
+
+            .hero {
+                padding: 120px 0 60px;
+            }
+
+            .mission,
+            .story,
+            .values,
+            .contact,
+            .cta {
+                padding: 60px 0;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="/" class="logo">
+                    <div class="logo-icon"></div>
+                    <span class="logo-text">Field<span>Log</span> Pro</span>
+                </a>
+
+                <div class="nav-links">
+                    <a href="/#how-it-works" class="nav-link">How It Works</a>
+                    <a href="/#features" class="nav-link">Features</a>
+                    <a href="/#pricing" class="nav-link">Pricing</a>
+                    <a href="/#faq" class="nav-link">FAQ</a>
+                </div>
+
+                <div class="nav-cta">
+                    <a href="/login.html" class="btn btn-ghost">Log In</a>
+                    <a href="/signup.html" class="btn btn-primary">Start Free Trial</a>
+                </div>
+
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <span class="hero-label">About Us</span>
+            <h1 class="hero-title">
+                Built by Landscapers.<br>
+                <span class="highlight">For Landscapers.</span>
+            </h1>
+            <p class="hero-subtitle">
+                We know the challenges of field work because we've lived them. FieldLog Pro was born from real frustration with outdated compliance tools.
+            </p>
+        </div>
+    </section>
+
+    <!-- Mission -->
+    <section class="mission">
+        <div class="container">
+            <div class="mission-grid">
+                <div class="mission-content">
+                    <h2>Our Mission</h2>
+                    <p>
+                        We believe compliance shouldn't be a burden. Every landscaper deserves tools that work as hard as they do — tools that are fast, simple, and built for the field.
+                    </p>
+                    <p>
+                        FieldLog Pro exists to eliminate the paperwork headache so you can focus on what you do best: making properties beautiful and keeping them safe.
+                    </p>
+                    <p>
+                        No more lost paper logs. No more fear of inspectors. No more expensive enterprise software designed for corporations. Just straightforward logging that works.
+                    </p>
+                </div>
+                <div class="mission-visual">
+                    <span class="mission-icon">🌱</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story -->
+    <section class="story">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Our Story</span>
+                <h2 class="section-title">From Field Frustration to Field Solution</h2>
+            </div>
+
+            <div class="story-content">
+                <div class="story-block">
+                    <h3>The Problem We Faced</h3>
+                    <p>
+                        It started with a $2,500 fine. One of our founders was running a successful lawn care business when an inspector showed up unannounced. The paper logs were in the truck — somewhere. By the time they were found, some pages were water-damaged, others illegible.
+                    </p>
+                    <p>
+                        The fine wasn't just about money. It was the realization that every landscaper faces this same problem: staying compliant while doing the actual work of running a business.
+                    </p>
+                </div>
+
+                <div class="story-block">
+                    <h3>The Search for Solutions</h3>
+                    <p>
+                        We looked at every option on the market. Enterprise software at $400/month designed for massive ag operations. Clunky apps that took 10 minutes per entry. Spreadsheets that nobody actually used.
+                    </p>
+                    <p>
+                        Nothing was built for the small crew working job to job, phone in one hand, sprayer in the other.
+                    </p>
+                </div>
+
+                <div class="story-block">
+                    <h3>Building What We Needed</h3>
+                    <p>
+                        So we built it ourselves. FieldLog Pro started as an internal tool — a simple app that let our crews log applications in 30 seconds, right from their phones. Photo capture for labels. Auto-filled weather data. Instant reports.
+                    </p>
+                    <p>
+                        When other landscapers saw it, they wanted it too. And that's when we realized: this wasn't just our problem to solve. It was everyone's.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values -->
+    <section class="values">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Our Values</span>
+                <h2 class="section-title">What We Stand For</h2>
+                <p class="section-subtitle">The principles that guide everything we build.</p>
+            </div>
+
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">⚡</div>
+                    <h3 class="value-title">Speed First</h3>
+                    <p class="value-description">
+                        Every feature is designed around one question: "Can this be done in under 30 seconds?" If not, we redesign it.
+                    </p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">🎯</div>
+                    <h3 class="value-title">Simplicity Over Features</h3>
+                    <p class="value-description">
+                        We'd rather do five things perfectly than fifty things poorly. No bloat, no complexity, no learning curve.
+                    </p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">🤝</div>
+                    <h3 class="value-title">Fair Pricing</h3>
+                    <p class="value-description">
+                        Software shouldn't cost more than your truck payment. We price for small businesses, not enterprises.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Get In Touch</span>
+                <h2 class="section-title">We'd Love to Hear From You</h2>
+                <p class="section-subtitle">Questions, feedback, or just want to say hi? We're here.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-text">
+                            <strong>General Inquiries</strong>
+                            <a href="mailto:hello@fieldlog.pro">hello@fieldlog.pro</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">🛟</div>
+                        <div class="contact-text">
+                            <strong>Support</strong>
+                            <a href="mailto:support@fieldlog.pro">support@fieldlog.pro</a>
+                            <span>Response within 24 hours</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">💼</div>
+                        <div class="contact-text">
+                            <strong>Sales & Enterprise</strong>
+                            <a href="mailto:sales@fieldlog.pro">sales@fieldlog.pro</a>
+                            <span>For teams of 10+</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3>Send a Message</h3>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label class="form-label" for="name">Your Name</label>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="John Smith" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email Address</label>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="john@company.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="message">Message</label>
+                            <textarea id="message" name="message" class="form-textarea" placeholder="How can we help?" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large" style="width: 100%;">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Simplify Your Compliance?</h2>
+                <p class="cta-subtitle">Join 127+ landscaping companies who've made the switch. Start your 60-day free trial today.</p>
+                <div class="cta-buttons">
+                    <a href="/signup.html" class="btn btn-primary btn-large">Start Free Trial</a>
+                    <a href="/#features" class="btn btn-secondary btn-large">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="logo-icon"></div>
+                        <span class="logo-text">Field<span>Log</span> Pro</span>
+                    </div>
+                    <p class="footer-tagline">Professional field logging for landscapers. Log smart. Stay compliant.</p>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="/#features">Features</a></li>
+                        <li><a href="/#pricing">Pricing</a></li>
+                        <li><a href="/#faq">FAQ</a></li>
+                        <li><a href="/signup.html">Free Trial</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="/about.html">About</a></li>
+                        <li><a href="/about.html#contact">Contact</a></li>
+                        <li><a href="mailto:support@fieldlog.pro">Support</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:hello@fieldlog.pro">hello@fieldlog.pro</a></li>
+                        <li><a href="mailto:support@fieldlog.pro">support@fieldlog.pro</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2026 FieldLog Pro, Inc. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="/privacy.html">Privacy Policy</a>
+                    <a href="/terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Contact form handler
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // TODO: Connect to backend
+            console.log('Contact form:', { name, email, message });
+            alert('Thank you for your message! We\'ll get back to you within 24 hours.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

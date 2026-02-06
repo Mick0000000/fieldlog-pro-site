@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | FieldLog Pro</title>
+    <meta name="description" content="FieldLog Pro Privacy Policy - Learn how we collect, use, and protect your data.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%232ECC71'/><path d='M16 6L10 14h12L16 6z' fill='white'/><rect x='14' y='14' width='4' height='12' fill='white'/></svg>">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --green-primary: #2ECC71;
+            --green-dark: #27AE60;
+            --gray-900: #2C3E50;
+            --gray-700: #34495E;
+            --gray-500: #7F8C8D;
+            --gray-300: #BDC3C7;
+            --gray-100: #ECF0F1;
+            --gray-50: #F8FAFB;
+            --white: #FFFFFF;
+            --shadow-md: 0 4px 12px rgba(44, 62, 80, 0.08);
+            --radius-sm: 6px;
+            --radius-md: 10px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--gray-900);
+            line-height: 1.6;
+            background: var(--white);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(44, 62, 80, 0.06);
+        }
+
+        .nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--gray-900);
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--green-primary);
+            border-radius: var(--radius-sm);
+            position: relative;
+        }
+
+        .logo-icon::before {
+            content: '';
+            position: absolute;
+            top: 6px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-bottom: 10px solid white;
+        }
+
+        .logo-icon::after {
+            content: '';
+            position: absolute;
+            bottom: 4px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 6px;
+            height: 14px;
+            background: white;
+            border-radius: 1px;
+        }
+
+        .logo-text {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        .logo-text span {
+            color: var(--green-primary);
+        }
+
+        .back-link {
+            color: var(--gray-500);
+            text-decoration: none;
+            font-size: 0.938rem;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: var(--gray-900);
+        }
+
+        /* Content */
+        .legal-hero {
+            padding: 140px 0 60px;
+            background: var(--gray-50);
+            text-align: center;
+        }
+
+        .legal-hero h1 {
+            font-size: 2.5rem;
+            color: var(--gray-900);
+            margin-bottom: 16px;
+        }
+
+        .legal-hero .date {
+            color: var(--gray-500);
+            font-size: 1rem;
+        }
+
+        .legal-content {
+            padding: 60px 0 100px;
+        }
+
+        .legal-content h2 {
+            font-size: 1.5rem;
+            color: var(--gray-900);
+            margin: 48px 0 20px;
+            padding-top: 24px;
+            border-top: 1px solid var(--gray-100);
+        }
+
+        .legal-content h2:first-of-type {
+            margin-top: 0;
+            padding-top: 0;
+            border-top: none;
+        }
+
+        .legal-content h3 {
+            font-size: 1.125rem;
+            color: var(--gray-900);
+            margin: 32px 0 12px;
+        }
+
+        .legal-content p {
+            color: var(--gray-700);
+            margin-bottom: 16px;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .legal-content ul {
+            color: var(--gray-700);
+            margin-bottom: 16px;
+            padding-left: 24px;
+        }
+
+        .legal-content li {
+            margin-bottom: 8px;
+            line-height: 1.7;
+        }
+
+        .legal-content a {
+            color: var(--green-primary);
+            text-decoration: none;
+        }
+
+        .legal-content a:hover {
+            color: var(--green-dark);
+            text-decoration: underline;
+        }
+
+        .highlight-box {
+            background: rgba(46, 204, 113, 0.08);
+            border-left: 4px solid var(--green-primary);
+            padding: 20px 24px;
+            margin: 24px 0;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+            color: var(--gray-900);
+        }
+
+        /* Footer */
+        .footer {
+            padding: 40px 0;
+            background: var(--gray-900);
+            text-align: center;
+        }
+
+        .footer p {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.875rem;
+        }
+
+        .footer a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            margin: 0 12px;
+        }
+
+        .footer a:hover {
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .legal-hero {
+                padding: 120px 0 40px;
+            }
+
+            .legal-hero h1 {
+                font-size: 2rem;
+            }
+
+            .legal-content {
+                padding: 40px 0 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <a href="/" class="logo">
+                <div class="logo-icon"></div>
+                <span class="logo-text">Field<span>Log</span> Pro</span>
+            </a>
+            <a href="/" class="back-link">← Back to Home</a>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="legal-hero">
+        <div class="container">
+            <h1>Privacy Policy</h1>
+            <p class="date">Last updated: January 28, 2026</p>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <article class="legal-content">
+        <div class="container">
+            <div class="highlight-box">
+                <p><strong>Summary:</strong> We collect only the data necessary to provide our service. We never sell your personal information. Your compliance records belong to you.</p>
+            </div>
+
+            <h2>1. Introduction</h2>
+            <p>
+                FieldLog Pro, Inc. ("FieldLog Pro," "we," "us," or "our") respects your privacy and is committed to protecting your personal data. This privacy policy explains how we collect, use, disclose, and safeguard your information when you use our website and mobile application (collectively, the "Service").
+            </p>
+            <p>
+                Please read this privacy policy carefully. By accessing or using our Service, you acknowledge that you have read, understood, and agree to be bound by this privacy policy.
+            </p>
+
+            <h2>2. Information We Collect</h2>
+
+            <h3>2.1 Information You Provide</h3>
+            <p>We collect information you provide directly to us, including:</p>
+            <ul>
+                <li><strong>Account Information:</strong> Name, email address, password, company name, state, and pesticide license number</li>
+                <li><strong>Application Records:</strong> Chemical application data, product information, application dates, locations, weather conditions, and photos you upload</li>
+                <li><strong>Customer Information:</strong> Names and contact information of your customers (for notification purposes)</li>
+                <li><strong>Payment Information:</strong> Billing address and payment method details (processed securely by our payment processor)</li>
+                <li><strong>Communications:</strong> Information you provide when contacting our support team</li>
+            </ul>
+
+            <h3>2.2 Information Collected Automatically</h3>
+            <p>When you use our Service, we automatically collect:</p>
+            <ul>
+                <li><strong>Device Information:</strong> Device type, operating system, unique device identifiers</li>
+                <li><strong>Location Data:</strong> GPS coordinates when logging applications (only when you actively use the logging feature)</li>
+                <li><strong>Weather Data:</strong> Temperature, wind speed, humidity at application locations</li>
+                <li><strong>Usage Data:</strong> Features used, time spent in app, error logs</li>
+                <li><strong>Log Data:</strong> IP address, browser type, pages visited, time and date of visits</li>
+            </ul>
+
+            <h3>2.3 Information from Third Parties</h3>
+            <p>We may receive information from:</p>
+            <ul>
+                <li>Weather data providers (for automatic weather capture)</li>
+                <li>EPA databases (for chemical product information)</li>
+                <li>Payment processors (transaction confirmations)</li>
+            </ul>
+
+            <h2>3. How We Use Your Information</h2>
+            <p>We use the information we collect to:</p>
+            <ul>
+                <li>Provide, maintain, and improve our Service</li>
+                <li>Create and manage your account</li>
+                <li>Process your pesticide application logs and generate compliance reports</li>
+                <li>Send notifications to your customers about applications</li>
+                <li>Process payments and send billing-related communications</li>
+                <li>Respond to your comments, questions, and support requests</li>
+                <li>Send you technical notices, updates, and security alerts</li>
+                <li>Monitor and analyze trends, usage, and activities</li>
+                <li>Detect, investigate, and prevent fraudulent transactions and abuse</li>
+                <li>Comply with legal obligations</li>
+            </ul>
+
+            <h2>4. How We Share Your Information</h2>
+            <p>We do not sell your personal information. We may share your information only in the following circumstances:</p>
+
+            <h3>4.1 With Your Consent</h3>
+            <p>We share information with your consent or at your direction, such as when you send application notifications to customers.</p>
+
+            <h3>4.2 Service Providers</h3>
+            <p>We share information with third-party vendors who provide services on our behalf, including:</p>
+            <ul>
+                <li>Cloud hosting and data storage (Amazon Web Services)</li>
+                <li>Payment processing (Stripe)</li>
+                <li>Email delivery services</li>
+                <li>Customer support tools</li>
+                <li>Analytics providers</li>
+            </ul>
+
+            <h3>4.3 Legal Requirements</h3>
+            <p>We may disclose information if required by law, such as in response to a subpoena, court order, or regulatory request.</p>
+
+            <h3>4.4 Business Transfers</h3>
+            <p>If we are involved in a merger, acquisition, or sale of assets, your information may be transferred as part of that transaction.</p>
+
+            <h2>5. Data Retention</h2>
+            <p>
+                We retain your application records for 7 years, as required by most state compliance regulations. Account information is retained for the duration of your account plus 1 year after deletion. You may request deletion of your data at any time, subject to our legal retention requirements.
+            </p>
+
+            <h2>6. Data Security</h2>
+            <p>We implement industry-standard security measures to protect your data:</p>
+            <ul>
+                <li>256-bit SSL/TLS encryption for all data in transit</li>
+                <li>AES-256 encryption for data at rest</li>
+                <li>SOC 2 Type II compliant infrastructure</li>
+                <li>Regular security audits and penetration testing</li>
+                <li>Multi-factor authentication options</li>
+                <li>Automatic backups with geographic redundancy</li>
+            </ul>
+
+            <h2>7. Your Rights and Choices</h2>
+            <p>Depending on your location, you may have the following rights:</p>
+            <ul>
+                <li><strong>Access:</strong> Request a copy of your personal data</li>
+                <li><strong>Correction:</strong> Request correction of inaccurate data</li>
+                <li><strong>Deletion:</strong> Request deletion of your data (subject to legal retention requirements)</li>
+                <li><strong>Portability:</strong> Request your data in a machine-readable format</li>
+                <li><strong>Opt-out:</strong> Opt out of marketing communications at any time</li>
+            </ul>
+            <p>To exercise these rights, contact us at <a href="mailto:privacy@fieldlog.pro">privacy@fieldlog.pro</a>.</p>
+
+            <h2>8. California Privacy Rights (CCPA)</h2>
+            <p>If you are a California resident, you have additional rights under the California Consumer Privacy Act:</p>
+            <ul>
+                <li>Right to know what personal information is collected</li>
+                <li>Right to know whether personal information is sold or disclosed</li>
+                <li>Right to opt out of the sale of personal information (we do not sell personal information)</li>
+                <li>Right to non-discrimination for exercising your rights</li>
+            </ul>
+
+            <h2>9. Children's Privacy</h2>
+            <p>
+                Our Service is not intended for individuals under 18 years of age. We do not knowingly collect personal information from children. If we learn we have collected information from a child, we will delete it promptly.
+            </p>
+
+            <h2>10. International Data Transfers</h2>
+            <p>
+                Your information may be transferred to and processed in the United States, where our servers are located. We ensure appropriate safeguards are in place to protect your data in compliance with applicable laws.
+            </p>
+
+            <h2>11. Cookies and Tracking</h2>
+            <p>We use cookies and similar technologies to:</p>
+            <ul>
+                <li>Keep you logged in</li>
+                <li>Remember your preferences</li>
+                <li>Analyze how our Service is used</li>
+                <li>Improve our Service</li>
+            </ul>
+            <p>You can control cookies through your browser settings, but disabling them may affect functionality.</p>
+
+            <h2>12. Changes to This Policy</h2>
+            <p>
+                We may update this privacy policy from time to time. We will notify you of any material changes by posting the new policy on this page and updating the "Last updated" date. Your continued use of the Service after changes constitutes acceptance of the updated policy.
+            </p>
+
+            <h2>13. Contact Us</h2>
+            <p>If you have questions about this privacy policy or our data practices, please contact us:</p>
+            <ul>
+                <li>Email: <a href="mailto:privacy@fieldlog.pro">privacy@fieldlog.pro</a></li>
+                <li>Support: <a href="mailto:support@fieldlog.pro">support@fieldlog.pro</a></li>
+            </ul>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>
+                <a href="/">Home</a>
+                <a href="/terms.html">Terms of Service</a>
+                <a href="/about.html">About</a>
+            </p>
+            <p style="margin-top: 16px;">&copy; 2026 FieldLog Pro, Inc. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

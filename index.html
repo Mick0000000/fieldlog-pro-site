@@ -1,0 +1,1972 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FieldLog Pro | Pesticide Application Logging for Landscapers</title>
+    <meta name="description" content="Mobile-first chemical application tracking for lawn care & landscaping. Log in 30 seconds, avoid $5K fines, keep perfect records. 30-day free trial.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="FieldLog Pro - Chemical Application Tracking">
+    <meta property="og:description" content="Log applications in 30 seconds. Auto-generate compliance reports. Built for landscapers.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fieldlog.pro">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%232ECC71'/><path d='M16 6L10 14h12L16 6z' fill='white'/><rect x='14' y='14' width='4' height='12' fill='white'/></svg>">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "FieldLog Pro",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "iOS, Android, Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "39.00",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+
+    <style>
+        :root {
+            --green-primary: #2ECC71;
+            --green-dark: #27AE60;
+            --green-light: #A8E6CF;
+            --blue-secondary: #3498DB;
+            --blue-dark: #2980B9;
+            --gray-900: #2C3E50;
+            --gray-700: #34495E;
+            --gray-500: #7F8C8D;
+            --gray-300: #BDC3C7;
+            --gray-100: #ECF0F1;
+            --gray-50: #F8FAFB;
+            --orange-accent: #E67E22;
+            --orange-dark: #D35400;
+            --white: #FFFFFF;
+            --shadow-sm: 0 1px 2px rgba(44, 62, 80, 0.05);
+            --shadow-md: 0 4px 12px rgba(44, 62, 80, 0.08);
+            --shadow-lg: 0 12px 40px rgba(44, 62, 80, 0.12);
+            --shadow-xl: 0 24px 60px rgba(44, 62, 80, 0.15);
+            --radius-sm: 6px;
+            --radius-md: 10px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--gray-900);
+            line-height: 1.6;
+            background: var(--white);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ========== HEADER ========== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(44, 62, 80, 0.06);
+            transition: all 0.3s ease;
+        }
+
+        .header.scrolled {
+            box-shadow: var(--shadow-md);
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--gray-900);
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--green-primary);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logo-icon::before {
+            content: '';
+            position: absolute;
+            top: 6px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-bottom: 10px solid white;
+        }
+
+        .logo-icon::after {
+            content: '';
+            position: absolute;
+            bottom: 4px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 6px;
+            height: 14px;
+            background: white;
+            border-radius: 1px;
+        }
+
+        .logo-text {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 1.25rem;
+            letter-spacing: -0.02em;
+        }
+
+        .logo-text span {
+            color: var(--green-primary);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-link {
+            padding: 10px 16px;
+            color: var(--gray-700);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.938rem;
+            border-radius: var(--radius-md);
+            transition: all 0.2s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--gray-900);
+            background: var(--gray-100);
+        }
+
+        .nav-cta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-left: 16px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 24px;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 600;
+            font-size: 0.938rem;
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-ghost {
+            color: var(--gray-700);
+            background: transparent;
+        }
+
+        .btn-ghost:hover {
+            color: var(--gray-900);
+            background: var(--gray-100);
+        }
+
+        .btn-primary {
+            color: white;
+            background: var(--green-primary);
+            box-shadow: 0 2px 8px rgba(46, 204, 113, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: var(--green-dark);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 16px rgba(46, 204, 113, 0.4);
+        }
+
+        .btn-secondary {
+            color: var(--gray-900);
+            background: var(--white);
+            border: 2px solid var(--gray-300);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--gray-900);
+        }
+
+        .btn-large {
+            padding: 16px 32px;
+            font-size: 1rem;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            padding: 8px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .mobile-menu-btn span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--gray-900);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        /* ========== EARLY ADOPTER BANNER ========== */
+        .banner {
+            background: linear-gradient(135deg, var(--orange-accent) 0%, var(--orange-dark) 100%);
+            color: white;
+            padding: 12px 0;
+            margin-top: 72px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .banner-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+
+        .banner-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.813rem;
+            font-weight: 600;
+        }
+
+        .banner-text {
+            font-size: 0.938rem;
+            font-weight: 500;
+        }
+
+        .banner-text strong {
+            font-weight: 700;
+        }
+
+        .banner-spots {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 6px 14px;
+            border-radius: var(--radius-sm);
+            font-weight: 700;
+            font-size: 0.875rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        .banner-cta {
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.938rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            transition: gap 0.2s ease;
+        }
+
+        .banner-cta:hover {
+            gap: 8px;
+        }
+
+        /* ========== HERO ========== */
+        .hero {
+            padding: 80px 0 100px;
+            background: linear-gradient(180deg, var(--gray-50) 0%, var(--white) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -200px;
+            right: -200px;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(46, 204, 113, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            left: -100px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(52, 152, 219, 0.06) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content {
+            max-width: 560px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(46, 204, 113, 0.1);
+            color: var(--green-dark);
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .hero-badge svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 800;
+            color: var(--gray-900);
+            margin-bottom: 24px;
+            letter-spacing: -0.03em;
+        }
+
+        .hero-title .highlight {
+            color: var(--green-primary);
+            position: relative;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--gray-700);
+            margin-bottom: 40px;
+            line-height: 1.7;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+        }
+
+        .hero-trust {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.875rem;
+            color: var(--gray-500);
+        }
+
+        .trust-icon {
+            width: 20px;
+            height: 20px;
+            background: var(--green-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--green-dark);
+            font-size: 0.75rem;
+        }
+
+        .hero-visual {
+            position: relative;
+        }
+
+        .phone-mockup {
+            position: relative;
+            max-width: 320px;
+            margin: 0 auto;
+        }
+
+        .phone-frame {
+            background: var(--gray-900);
+            border-radius: 40px;
+            padding: 12px;
+            box-shadow: var(--shadow-xl), inset 0 0 0 2px rgba(255, 255, 255, 0.1);
+            position: relative;
+        }
+
+        .phone-frame::before {
+            content: '';
+            position: absolute;
+            top: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 24px;
+            background: var(--gray-900);
+            border-radius: 20px;
+            z-index: 10;
+        }
+
+        .phone-screen {
+            background: var(--white);
+            border-radius: 32px;
+            overflow: hidden;
+            aspect-ratio: 9/19;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .phone-screen img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .floating-card {
+            position: absolute;
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 16px 20px;
+            box-shadow: var(--shadow-lg);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .floating-card.card-1 {
+            top: 10%;
+            left: -40px;
+            animation-delay: 0s;
+        }
+
+        .floating-card.card-2 {
+            bottom: 20%;
+            right: -30px;
+            animation-delay: 1.5s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .floating-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+        }
+
+        .floating-icon.green {
+            background: rgba(46, 204, 113, 0.15);
+        }
+
+        .floating-icon.blue {
+            background: rgba(52, 152, 219, 0.15);
+        }
+
+        .floating-text {
+            font-size: 0.875rem;
+        }
+
+        .floating-text strong {
+            display: block;
+            color: var(--gray-900);
+            font-weight: 600;
+        }
+
+        .floating-text span {
+            color: var(--gray-500);
+            font-size: 0.75rem;
+        }
+
+        /* ========== SOCIAL PROOF BAR ========== */
+        .social-proof {
+            padding: 40px 0;
+            background: var(--white);
+            border-top: 1px solid var(--gray-100);
+            border-bottom: 1px solid var(--gray-100);
+        }
+
+        .proof-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 48px;
+            flex-wrap: wrap;
+        }
+
+        .proof-label {
+            font-size: 0.875rem;
+            color: var(--gray-500);
+            font-weight: 500;
+        }
+
+        .state-badges {
+            display: flex;
+            gap: 12px;
+        }
+
+        .state-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: var(--gray-50);
+            border-radius: var(--radius-md);
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--gray-700);
+            border: 1px solid var(--gray-100);
+        }
+
+        .state-abbr {
+            background: var(--green-primary);
+            color: white;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        /* ========== PROBLEM/SOLUTION ========== */
+        .problem-solution {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--green-primary);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            color: var(--gray-900);
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: var(--gray-500);
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .comparison-card {
+            padding: 40px;
+            border-radius: var(--radius-xl);
+            position: relative;
+        }
+
+        .comparison-card.old-way {
+            background: var(--gray-50);
+            border: 1px solid var(--gray-100);
+        }
+
+        .comparison-card.new-way {
+            background: linear-gradient(135deg, rgba(46, 204, 113, 0.08) 0%, rgba(52, 152, 219, 0.05) 100%);
+            border: 2px solid var(--green-primary);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .old-way .card-icon {
+            background: rgba(231, 76, 60, 0.1);
+        }
+
+        .new-way .card-icon {
+            background: rgba(46, 204, 113, 0.15);
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--gray-900);
+        }
+
+        .card-list {
+            list-style: none;
+        }
+
+        .card-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 12px 0;
+            font-size: 1rem;
+            color: var(--gray-700);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .card-list li:last-child {
+            border-bottom: none;
+        }
+
+        .card-list li::before {
+            flex-shrink: 0;
+            font-size: 1.1rem;
+        }
+
+        .old-way .card-list li::before {
+            content: '✕';
+            color: #E74C3C;
+        }
+
+        .new-way .card-list li::before {
+            content: '✓';
+            color: var(--green-primary);
+            font-weight: 700;
+        }
+
+        /* ========== HOW IT WORKS ========== */
+        .how-it-works {
+            padding: 100px 0;
+            background: var(--gray-50);
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            position: relative;
+        }
+
+        .steps-grid::before {
+            content: '';
+            position: absolute;
+            top: 48px;
+            left: calc(16.67% + 24px);
+            right: calc(16.67% + 24px);
+            height: 2px;
+            background: linear-gradient(90deg, var(--green-primary) 0%, var(--blue-secondary) 100%);
+            z-index: 0;
+        }
+
+        .step-card {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .step-number {
+            width: 96px;
+            height: 96px;
+            margin: 0 auto 24px;
+            background: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--green-primary);
+            box-shadow: var(--shadow-md);
+            border: 3px solid var(--green-light);
+        }
+
+        .step-icon {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+
+        .step-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 12px;
+        }
+
+        .step-description {
+            font-size: 1rem;
+            color: var(--gray-500);
+            line-height: 1.6;
+        }
+
+        /* ========== FEATURES ========== */
+        .features {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .feature-card {
+            padding: 32px;
+            background: var(--gray-50);
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--gray-100);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            background: var(--white);
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-4px);
+            border-color: transparent;
+        }
+
+        .feature-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, var(--green-primary) 0%, var(--green-dark) 100%);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px rgba(46, 204, 113, 0.3);
+        }
+
+        .feature-title {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 8px;
+        }
+
+        .feature-description {
+            font-size: 0.938rem;
+            color: var(--gray-500);
+            line-height: 1.6;
+        }
+
+        /* ========== PRICING ========== */
+        .pricing {
+            padding: 100px 0;
+            background: linear-gradient(180deg, var(--gray-50) 0%, var(--white) 100%);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .pricing-card {
+            padding: 40px;
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            border: 2px solid var(--gray-100);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            border-color: var(--gray-200);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .pricing-card.featured {
+            border-color: var(--green-primary);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--green-primary);
+            color: white;
+            padding: 6px 20px;
+            border-radius: 20px;
+            font-size: 0.813rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 32px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid var(--gray-100);
+        }
+
+        .pricing-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 8px;
+        }
+
+        .pricing-tagline {
+            font-size: 0.938rem;
+            color: var(--gray-500);
+            margin-bottom: 20px;
+        }
+
+        .pricing-amount {
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+            gap: 4px;
+        }
+
+        .pricing-currency {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--gray-900);
+        }
+
+        .pricing-value {
+            font-family: 'Outfit', sans-serif;
+            font-size: 4rem;
+            font-weight: 800;
+            color: var(--gray-900);
+            line-height: 1;
+        }
+
+        .pricing-period {
+            font-size: 1rem;
+            color: var(--gray-500);
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 32px;
+        }
+
+        .pricing-features li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 0;
+            font-size: 0.938rem;
+            color: var(--gray-700);
+        }
+
+        .pricing-features li::before {
+            content: '✓';
+            color: var(--green-primary);
+            font-weight: 700;
+        }
+
+        .pricing-cta {
+            width: 100%;
+        }
+
+        .early-adopter-note {
+            text-align: center;
+            margin-top: 40px;
+            padding: 24px;
+            background: rgba(230, 126, 34, 0.1);
+            border-radius: var(--radius-lg);
+            border: 1px dashed var(--orange-accent);
+        }
+
+        .early-adopter-note p {
+            font-size: 0.938rem;
+            color: var(--gray-700);
+        }
+
+        .early-adopter-note strong {
+            color: var(--orange-accent);
+        }
+
+        /* ========== FAQ ========== */
+        .faq {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .faq-grid {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--gray-100);
+        }
+
+        .faq-question {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 24px 0;
+            background: none;
+            border: none;
+            cursor: pointer;
+            text-align: left;
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--gray-900);
+            transition: color 0.2s ease;
+        }
+
+        .faq-question:hover {
+            color: var(--green-primary);
+        }
+
+        .faq-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--gray-100);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            color: var(--gray-500);
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .faq-item.open .faq-icon {
+            background: var(--green-primary);
+            color: white;
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.open .faq-answer {
+            max-height: 300px;
+        }
+
+        .faq-answer p {
+            padding: 0 0 24px;
+            font-size: 1rem;
+            color: var(--gray-500);
+            line-height: 1.7;
+        }
+
+        /* ========== FINAL CTA ========== */
+        .final-cta {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--gray-900) 0%, #1a252f 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .final-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232ECC71' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .cta-content {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: var(--white);
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+        }
+
+        .cta-subtitle {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 40px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 32px;
+        }
+
+        .cta-trust {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .cta-trust span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .cta-trust svg {
+            width: 16px;
+            height: 16px;
+            color: var(--green-primary);
+        }
+
+        /* ========== FOOTER ========== */
+        .footer {
+            padding: 60px 0 40px;
+            background: var(--gray-900);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+
+        .footer-brand {
+            max-width: 280px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+
+        .footer-logo .logo-icon {
+            width: 32px;
+            height: 32px;
+        }
+
+        .footer-logo .logo-text {
+            color: white;
+            font-size: 1.125rem;
+        }
+
+        .footer-tagline {
+            font-size: 0.938rem;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.7;
+        }
+
+        .footer-column h4 {
+            font-size: 0.875rem;
+            font-weight: 700;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            font-size: 0.938rem;
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--green-primary);
+        }
+
+        .footer-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 32px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer-copyright {
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .footer-legal {
+            display: flex;
+            gap: 24px;
+        }
+
+        .footer-legal a {
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .footer-legal a:hover {
+            color: white;
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 1024px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+
+            .hero-content {
+                max-width: 100%;
+                text-align: center;
+            }
+
+            .hero-cta {
+                justify-content: center;
+            }
+
+            .hero-trust {
+                justify-content: center;
+            }
+
+            .hero-visual {
+                order: -1;
+            }
+
+            .phone-mockup {
+                max-width: 280px;
+            }
+
+            .floating-card.card-1 {
+                left: 0;
+            }
+
+            .floating-card.card-2 {
+                right: 0;
+            }
+
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .steps-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .steps-grid::before {
+                display: none;
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .nav-cta {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: flex;
+            }
+
+            .banner-content {
+                flex-direction: column;
+                gap: 12px;
+                text-align: center;
+            }
+
+            .hero {
+                padding: 60px 0 80px;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+            }
+
+            .btn-large {
+                width: 100%;
+            }
+
+            .social-proof .container {
+                flex-direction: column;
+            }
+
+            .proof-content {
+                flex-direction: column;
+                gap: 24px;
+            }
+
+            .state-badges {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .problem-solution,
+            .how-it-works,
+            .features,
+            .pricing,
+            .faq,
+            .final-cta {
+                padding: 60px 0;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-card.featured {
+                order: -1;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* ========== ANIMATIONS ========== */
+        @media (prefers-reduced-motion: no-preference) {
+            .hero-content,
+            .hero-visual,
+            .section-header,
+            .comparison-card,
+            .step-card,
+            .feature-card,
+            .pricing-card {
+                opacity: 0;
+                transform: translateY(30px);
+                animation: fadeInUp 0.6s ease forwards;
+            }
+
+            .hero-content { animation-delay: 0.1s; }
+            .hero-visual { animation-delay: 0.3s; }
+
+            @keyframes fadeInUp {
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="/" class="logo">
+                    <div class="logo-icon"></div>
+                    <span class="logo-text">Field<span>Log</span> Pro</span>
+                </a>
+
+                <div class="nav-links">
+                    <a href="#how-it-works" class="nav-link">How It Works</a>
+                    <a href="#features" class="nav-link">Features</a>
+                    <a href="#pricing" class="nav-link">Pricing</a>
+                    <a href="#faq" class="nav-link">FAQ</a>
+                </div>
+
+                <div class="nav-cta">
+                    <a href="/login.html" class="btn btn-ghost">Log In</a>
+                    <a href="https://app.fieldlog.pro/signup" class="btn btn-primary">Start Free Trial</a>
+                </div>
+
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Early Adopter Banner -->
+    <div class="banner">
+        <div class="container">
+            <div class="banner-content">
+                <span class="banner-badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                    </svg>
+                    Spring Special
+                </span>
+                <span class="banner-text">First 50 companies get <strong>$39/mo forever</strong></span>
+                <span class="banner-spots">Only 23 spots left</span>
+                <a href="https://app.fieldlog.pro/signup" class="banner-cta">Claim Yours <span>→</span></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        Trusted by 127+ landscaping companies
+                    </div>
+
+                    <h1 class="hero-title">
+                        Stop Worrying About Compliance Fines.<br>
+                        <span class="highlight">Start Logging in 30 Seconds.</span>
+                    </h1>
+
+                    <p class="hero-subtitle">
+                        Mobile-first chemical application tracking for landscapers.
+                        Replace paper logs, avoid $5,000 fines, keep customers happy.
+                    </p>
+
+                    <div class="hero-cta">
+                        <a href="https://app.fieldlog.pro/signup" class="btn btn-primary btn-large">
+                            Start Your 30-Day Free Trial
+                        </a>
+                        <a href="#how-it-works" class="btn btn-secondary btn-large">
+                            See How It Works
+                        </a>
+                    </div>
+
+                    <div class="hero-trust">
+                        <div class="trust-item">
+                            <span class="trust-icon">✓</span>
+                            No credit card required
+                        </div>
+                        <div class="trust-item">
+                            <span class="trust-icon">✓</span>
+                            Cancel anytime
+                        </div>
+                        <div class="trust-item">
+                            <span class="trust-icon">✓</span>
+                            All 50 states
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="floating-card card-1">
+                        <div class="floating-icon green">📱</div>
+                        <div class="floating-text">
+                            <strong>30 seconds</strong>
+                            <span>to log an application</span>
+                        </div>
+                    </div>
+
+                    <div class="phone-mockup">
+                        <div class="phone-frame">
+                            <div class="phone-screen">
+                                <img src="/images/app-screenshot.png" alt="FieldLog Pro app showing Quick Log feature with auto-filled GPS and weather data">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="floating-card card-2">
+                        <div class="floating-icon blue">📊</div>
+                        <div class="floating-text">
+                            <strong>100% compliant</strong>
+                            <span>reports generated</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Bar -->
+    <section class="social-proof">
+        <div class="container">
+            <div class="proof-content">
+                <span class="proof-label">Trusted by landscapers in:</span>
+                <div class="state-badges">
+                    <div class="state-badge">
+                        <span class="state-abbr">CA</span>
+                        California
+                    </div>
+                    <div class="state-badge">
+                        <span class="state-abbr">FL</span>
+                        Florida
+                    </div>
+                    <div class="state-badge">
+                        <span class="state-abbr">TX</span>
+                        Texas
+                    </div>
+                    <div class="state-badge">
+                        <span class="state-abbr">NY</span>
+                        New York
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem/Solution Section -->
+    <section class="problem-solution">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">The Problem</span>
+                <h2 class="section-title">Paper Logs Are Costing You Money (And Sleep)</h2>
+                <p class="section-subtitle">Most landscapers waste hours on compliance paperwork. There's a better way.</p>
+            </div>
+
+            <div class="comparison-grid">
+                <div class="comparison-card old-way">
+                    <div class="card-header">
+                        <div class="card-icon">📋</div>
+                        <h3 class="card-title">The Old Way</h3>
+                    </div>
+                    <ul class="card-list">
+                        <li>Paper logs that get lost or damaged</li>
+                        <li>2+ hours daily on manual entry</li>
+                        <li>$500-$5,000 fines for missing records</li>
+                        <li>Angry customers asking "what did you spray?"</li>
+                        <li>Expensive software at $145-400/month</li>
+                    </ul>
+                </div>
+
+                <div class="comparison-card new-way">
+                    <div class="card-header">
+                        <div class="card-icon">📱</div>
+                        <h3 class="card-title">With FieldLog Pro</h3>
+                    </div>
+                    <ul class="card-list">
+                        <li>Log from your phone in 30 seconds</li>
+                        <li>Photos auto-capture product labels</li>
+                        <li>Weather data saved automatically</li>
+                        <li>Customers get instant notifications</li>
+                        <li>Only $39/month (locked rate forever)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">How It Works</span>
+                <h2 class="section-title">Log Smart. Stay Compliant.</h2>
+                <p class="section-subtitle">Three simple steps to perfect compliance records.</p>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">📸</div>
+                    <h3 class="step-title">Snap & Log</h3>
+                    <p class="step-description">Take a photo of the product label. Our app auto-fills chemical info, EPA numbers, and application rates.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">✍️</div>
+                    <h3 class="step-title">Quick Details</h3>
+                    <p class="step-description">Add customer, location, and amount. GPS and weather data are captured automatically.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">✅</div>
+                    <h3 class="step-title">Done. Compliant.</h3>
+                    <p class="step-description">Customer gets instant notification. Compliance report ready for any inspector. All in 30 seconds.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Features</span>
+                <h2 class="section-title">Everything You Need. Nothing You Don't.</h2>
+                <p class="section-subtitle">Built by landscapers, for landscapers. No bloat, no complexity.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3 class="feature-title">30-Second Logging</h3>
+                    <p class="feature-description">Fastest logging in the industry. Photo capture auto-fills product data so you're back to work in seconds.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3 class="feature-title">Instant Reports</h3>
+                    <p class="feature-description">Generate state-compliant reports in 10 seconds. Ready for any inspector, any time.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📍</div>
+                    <h3 class="feature-title">Auto GPS & Weather</h3>
+                    <p class="feature-description">Location, temperature, wind speed, and humidity captured automatically. No manual entry.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📧</div>
+                    <h3 class="feature-title">Customer Notifications</h3>
+                    <p class="feature-description">Automatic emails to customers with application details. Professional, branded, instant.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3 class="feature-title">7-Year Cloud Storage</h3>
+                    <p class="feature-description">Your records are stored securely for 7 years. SOC 2 compliant. Never lose a log again.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🇺🇸</div>
+                    <h3 class="feature-title">All 50 States</h3>
+                    <p class="feature-description">Pre-configured for every state's compliance requirements. We handle the regulations, you handle the work.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Simple Pricing</span>
+                <h2 class="section-title">Finally, Software That Doesn't Cost More Than Your Truck Payment</h2>
+                <p class="section-subtitle">30-day free trial. No credit card required. Cancel anytime.</p>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card featured">
+                    <span class="pricing-badge">Most Popular</span>
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Starter</h3>
+                        <p class="pricing-tagline">Perfect for small crews</p>
+                        <div class="pricing-amount">
+                            <span class="pricing-currency">$</span>
+                            <span class="pricing-value">39</span>
+                            <span class="pricing-period">/month</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>1-3 applicators</li>
+                        <li>Unlimited applications</li>
+                        <li>Photo capture & auto-fill</li>
+                        <li>Customer notifications</li>
+                        <li>State-compliant reports</li>
+                        <li>7-year storage</li>
+                        <li>Email support</li>
+                    </ul>
+                    <a href="https://app.fieldlog.pro/signup" class="btn btn-primary pricing-cta">Start 30-Day Free Trial</a>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Professional</h3>
+                        <p class="pricing-tagline">For growing teams</p>
+                        <div class="pricing-amount">
+                            <span class="pricing-currency">$</span>
+                            <span class="pricing-value">69</span>
+                            <span class="pricing-period">/month</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>4-10 applicators</li>
+                        <li>Everything in Starter, plus:</li>
+                        <li>Team management dashboard</li>
+                        <li>Multi-location support</li>
+                        <li>Custom report branding</li>
+                        <li>Priority support</li>
+                        <li>API access</li>
+                    </ul>
+                    <a href="https://app.fieldlog.pro/signup" class="btn btn-secondary pricing-cta">Start 30-Day Free Trial</a>
+                </div>
+            </div>
+
+            <div class="early-adopter-note">
+                <p><strong>Early Adopter Special:</strong> Sign up now and lock in your rate forever. Only 23 of 50 spots remaining at the $39/month rate.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">FAQ</span>
+                <h2 class="section-title">Common Questions</h2>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Do I need internet in the field?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>The app works offline! Log applications without cell service, and they'll sync automatically when you're back online. Perfect for rural properties.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Will this work for my state?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! FieldLog Pro is pre-configured for all 50 states. We stay up-to-date with each state's specific compliance requirements so you don't have to.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What if I'm not tech-savvy?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>If you can take a photo with your phone, you can use FieldLog Pro. We designed it for landscapers in the field, not IT departments. Most users are logging applications within 5 minutes of signing up.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Can I import my old records?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! We offer free data migration for paper records and spreadsheets. Our team will help you get set up so you have complete records from day one.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What happens after the 30-day trial?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>If you love it (and you will), pick your plan and keep going. If not, cancel with one click. No contracts, no hidden fees, no hassle. Your data is always exportable.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Is my data secure?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely. We're SOC 2 compliant with bank-level encryption. Your records are stored securely for 7 years with automatic backups. We take your data as seriously as you do.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Stop Worrying About Compliance?</h2>
+                <p class="cta-subtitle">Join 127+ landscaping companies who've made the switch. Start your 30-day free trial today.</p>
+
+                <div class="cta-buttons">
+                    <a href="https://app.fieldlog.pro/signup" class="btn btn-primary btn-large">Start Your 30-Day Free Trial</a>
+                    <a href="mailto:hello@fieldlog.pro" class="btn btn-secondary btn-large" style="background: transparent; border-color: rgba(255,255,255,0.3); color: white;">
+                        Contact Sales
+                    </a>
+                </div>
+
+                <div class="cta-trust">
+                    <span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        No credit card required
+                    </span>
+                    <span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        30-day free trial
+                    </span>
+                    <span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        Cancel anytime
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="logo-icon"></div>
+                        <span class="logo-text">Field<span>Log</span> Pro</span>
+                    </div>
+                    <p class="footer-tagline">Professional field logging for landscapers. Log smart. Stay compliant.</p>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="https://app.fieldlog.pro/signup">Free Trial</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="/about.html">About</a></li>
+                        <li><a href="/about.html#contact">Contact</a></li>
+                        <li><a href="mailto:support@fieldlog.pro">Support</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:hello@fieldlog.pro">hello@fieldlog.pro</a></li>
+                        <li><a href="mailto:support@fieldlog.pro">support@fieldlog.pro</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2026 FieldLog Pro, Inc. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="/privacy.html">Privacy Policy</a>
+                    <a href="/terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                const isOpen = item.classList.contains('open');
+
+                // Close all items
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+
+                // Open clicked item if it wasn't open
+                if (!isOpen) {
+                    item.classList.add('open');
+                }
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = 100;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        const navCta = document.querySelector('.nav-cta');
+
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenuBtn.classList.toggle('active');
+                // Mobile menu implementation would go here
+            });
+        }
+    </script>
+</body>
+</html>

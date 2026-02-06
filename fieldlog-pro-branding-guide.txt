@@ -1,0 +1,502 @@
+# FIELDLOG PRO - OFFICIAL BRANDING GUIDE
+## Domain: fieldlog.pro
+
+---
+
+## BRAND IDENTITY
+
+**Company Name:** FieldLog Pro, Inc.
+**Product Name:** FieldLog Pro
+**Domain:** fieldlog.pro
+**Tagline:** "Professional Field Logging"
+**Alt Tagline:** "Log Smart. Stay Compliant."
+
+---
+
+## DOMAIN STRUCTURE
+
+**Marketing Site:** https://fieldlog.pro
+**Web App:** https://app.fieldlog.pro
+**Blog:** https://fieldlog.pro/blog
+**Support/Docs:** https://help.fieldlog.pro OR https://fieldlog.pro/support
+
+**Email:**
+- Support: support@fieldlog.pro
+- Sales: sales@fieldlog.pro
+- Hello: hello@fieldlog.pro
+- Info: info@fieldlog.pro
+
+---
+
+## SOCIAL MEDIA HANDLES
+
+**Primary Handles:** @fieldlogpro OR @fieldlog_pro
+
+**Register on:**
+- Instagram: @fieldlogpro
+- Facebook: facebook.com/fieldlogpro
+- LinkedIn: linkedin.com/company/fieldlogpro
+- Twitter/X: @fieldlogpro
+- YouTube: youtube.com/@fieldlogpro
+- TikTok: @fieldlogpro (if targeting younger landscapers)
+
+**Action:** Register these TODAY before someone else does.
+Use Namechk.com to check availability across all platforms.
+
+---
+
+## BRAND MESSAGING
+
+### Elevator Pitch (30 seconds):
+"FieldLog Pro is mobile-first compliance software for landscapers. 
+Log chemical applications in 30 seconds, auto-notify customers, 
+and generate state-compliant reports instantly. No more paper logs, 
+no more fines. Starting at $39/month."
+
+### Short Description (10 seconds):
+"Professional field logging for landscapers. Stay compliant in 30 seconds."
+
+### Long Description (Website):
+"FieldLog Pro helps landscaping and lawn care companies track chemical 
+applications, stay compliant with state regulations, and protect their 
+business from costly fines. Our mobile-first platform lets you log 
+applications in under 30 seconds, automatically notify customers, and 
+generate audit-ready reports for all 50 states."
+
+---
+
+## VALUE PROPOSITIONS
+
+**Primary:**
+"Stop worrying about compliance fines. Log applications in 30 seconds."
+
+**Secondary (Feature-focused):**
+- "Replace paper logs with mobile-first logging"
+- "Auto-notify customers with professional reports"
+- "Generate state-compliant reports in 10 seconds"
+- "Never lose a log again - 7-year secure storage"
+
+**Benefit-focused:**
+- "Save 90+ hours per month on paperwork"
+- "Avoid $500-$5,000 compliance fines"
+- "Look more professional to your customers"
+- "Sleep better knowing you're audit-ready"
+
+---
+
+## TARGET CUSTOMER
+
+**Who:**
+Small to medium landscaping/lawn care companies (1-20 employees)
+
+**Pain Points:**
+- Wasting 2+ hours daily on manual logging
+- Fear of state fines ($500-$5,000 per violation)
+- Lost or damaged paper logs
+- Customer complaints about lack of documentation
+- Existing software too expensive ($145-400/month)
+
+**What They Want:**
+- Simple, mobile-first tool
+- Fast logging (<1 minute)
+- Affordable (<$50/month)
+- Professional customer notifications
+- State-compliant records
+
+---
+
+## BRAND VOICE & TONE
+
+**We Sound Like:**
+- Professional but approachable
+- Helpful, not pushy
+- Straightforward, not technical
+- Confident, not arrogant
+
+**We Don't Sound Like:**
+- Overly corporate/stuffy
+- Tech startup bro culture
+- Condescending to non-tech users
+- Alarmist/fear-mongering
+
+**Example Good Copy:**
+"Log your application in 30 seconds. Customer gets instant notification. 
+You're compliant. Done."
+
+**Example Bad Copy:**
+"Revolutionize your workflow with our cutting-edge AI-powered compliance 
+platform that leverages machine learning to disrupt the legacy landscape 
+management paradigm."
+
+---
+
+## VISUAL IDENTITY (RECOMMENDATIONS)
+
+### Logo Concept:
+**Option 1:** Wordmark with leaf/grass icon
+- Text: "FieldLog" in bold sans-serif
+- "PRO" in smaller text or as superscript
+- Icon: Stylized grass blade or leaf (green)
+
+**Option 2:** Checkmark + Field
+- Checkmark integrated into letter "F" or standalone
+- Implies "done right" and "compliance"
+- Green checkmark on blue/gray background
+
+**Option 3:** Mobile + Clipboard
+- Simple icon showing phone with checkmark/clipboard
+- Modern, clearly communicates "mobile logging"
+
+### Color Palette:
+
+**Primary Green:** #2ECC71 (vibrant, growth, "go")
+- Use for: CTAs, success states, primary branding
+
+**Secondary Blue:** #3498DB (trust, professional)
+- Use for: Headers, navigation, secondary CTAs
+
+**Dark Gray:** #2C3E50 (professional, readable)
+- Use for: Body text, headings
+
+**Light Gray:** #ECF0F1 (backgrounds, subtle)
+- Use for: Page backgrounds, borders, cards
+
+**Accent Orange:** #E67E22 (urgency, limited offers)
+- Use for: Early adopter badges, countdown timers
+
+**White:** #FFFFFF
+- Use for: Backgrounds, contrast
+
+### Typography:
+
+**Headings:**
+- Font: Inter, Roboto, or similar sans-serif
+- Weight: Bold (700)
+- Clean, modern, professional
+
+**Body:**
+- Font: Inter, Roboto, or similar
+- Weight: Regular (400)
+- Readable on mobile
+
+**Buttons:**
+- Font: Same as headings
+- Weight: Semi-bold (600)
+- Slightly larger (16-18px)
+
+---
+
+## APP STORE LISTING
+
+### iOS App Store
+
+**App Name:** FieldLog Pro - Compliance Logger
+
+**Subtitle:** Log chemical applications in 30 seconds
+
+**Description:**
+FieldLog Pro is the easiest way for landscapers to log chemical 
+applications and stay compliant with state regulations.
+
+Features:
+• Log applications in under 30 seconds
+• Auto-capture GPS location and weather
+• Photo documentation (labels, before/after)
+• Automatic customer notifications
+• State-compliant reports for all 50 states
+• 7-year secure cloud storage
+• Works offline (coming soon)
+
+Perfect for:
+- Lawn care companies
+- Landscaping businesses
+- Pesticide applicators
+- Fertilizer application companies
+
+Pricing:
+• 60-day free trial (no credit card)
+• Starting at $39/month
+• Cancel anytime
+
+Stay compliant. Avoid fines. Save time.
+
+**Keywords:**
+pesticide, application, log, compliance, landscaping, lawn care, 
+chemical, tracker, field, fertilizer
+
+**Screenshots:**
+1. Login screen
+2. Quick log form (30 seconds)
+3. Photo capture
+4. Application history
+5. Compliance report preview
+
+### Google Play Store
+
+**App Name:** FieldLog Pro: Compliance Logging
+
+**Short Description:**
+Log chemical applications in 30 seconds. Stay compliant. Avoid fines.
+
+**Full Description:**
+(Same as iOS)
+
+---
+
+## WEBSITE COPY UPDATES
+
+### Homepage Hero (Updated with fieldlog.pro):
+
+**Headline:**
+Stop Worrying About Compliance Fines
+
+**Subheadline:**
+Log chemical applications in 30 seconds. Auto-generate compliant reports. 
+Never lose a paper log again.
+
+**CTA:**
+[Start 60-Day Free Trial]
+No credit card required
+
+**Trust Indicators:**
+✓ Used by 200+ landscaping companies
+✓ All 50 states supported
+✓ SOC 2 compliant
+
+### Meta Tags:
+
+```html
+<title>FieldLog Pro - Pesticide Application Logging Software for Landscapers</title>
+<meta name="description" content="Professional field logging for lawn care 
+and landscaping. Log chemical applications in 30 seconds, auto-notify customers, 
+generate state-compliant reports. 60-day free trial.">
+<link rel="canonical" href="https://fieldlog.pro">
+```
+
+---
+
+## EMAIL SIGNATURES
+
+### Support Team:
+```
+[Name]
+Customer Success, FieldLog Pro
+support@fieldlog.pro
+https://fieldlog.pro
+
+Professional Field Logging - Stay Compliant in 30 Seconds
+```
+
+### Founder/Sales:
+```
+[Your Name]
+Founder, FieldLog Pro
+[your-email]@fieldlog.pro
+https://fieldlog.pro
+
+Helping landscapers avoid compliance fines since 2026
+Book a demo: https://fieldlog.pro/demo
+```
+
+---
+
+## LEGAL ENTITY SETUP
+
+**Recommended Structure:**
+
+**Company Name:** FieldLog Pro, Inc. OR FieldLog Pro, LLC
+
+**Formation:**
+- State: Delaware (most common for startups) OR your home state
+- Type: LLC (simpler) OR C-Corp (if raising money)
+- Service: Northwest Registered Agent ($39 + state fees)
+- Total cost: $100-300
+
+**Trademark:**
+- File "FieldLog Pro" with USPTO
+- Class 9 (Software)
+- Class 42 (SaaS)
+- Cost: $250-350 per class
+- Optional but recommended
+
+**Business Bank Account:**
+- Mercury (online, startup-friendly)
+- Chase Business Banking
+- Separate from personal finances
+
+**Accounting:**
+- QuickBooks Online ($30/month)
+- Wave (free for small businesses)
+- Hire bookkeeper when revenue >$10K/month
+
+---
+
+## GOOGLE WORKSPACE SETUP
+
+**Domain:** fieldlog.pro
+
+**Email Accounts:**
+- hello@fieldlog.pro (general inquiries)
+- support@fieldlog.pro (customer support)
+- sales@fieldlog.pro (sales inquiries)
+- [yourname]@fieldlog.pro (founder)
+- team@fieldlog.pro (internal team updates)
+
+**Cost:** $6/user/month (Google Workspace)
+
+**Setup:**
+1. Go to workspace.google.com
+2. Add domain: fieldlog.pro
+3. Verify ownership (DNS records)
+4. Create email accounts
+5. Set up email forwarding (hello@ → your personal email)
+
+---
+
+## ANALYTICS & TRACKING SETUP
+
+**Google Analytics 4:**
+- Property: FieldLog Pro
+- Website: fieldlog.pro
+- App: com.fieldlogpro.app (iOS/Android)
+
+**Google Tag Manager:**
+- Container: fieldlog.pro
+- Track: Button clicks, form submissions, video plays
+
+**Google Search Console:**
+- Verify: fieldlog.pro
+- Submit sitemap: fieldlog.pro/sitemap.xml
+
+**Facebook Pixel:**
+- (If running Facebook ads)
+
+**LinkedIn Insight Tag:**
+- (If running LinkedIn ads)
+
+---
+
+## SSL & SECURITY
+
+**SSL Certificate:**
+- Auto-provisioned via Vercel/Netlify
+- Let's Encrypt (free)
+- Force HTTPS everywhere
+
+**Security Headers:**
+- HSTS (HTTP Strict Transport Security)
+- X-Frame-Options: DENY
+- Content-Security-Policy
+
+**Backup Strategy:**
+- Daily automated backups
+- 30-day retention
+- Offsite storage (AWS S3 or similar)
+
+---
+
+## CONTENT CALENDAR (FIRST 30 DAYS)
+
+### Week 1: Launch Prep
+- Day 1: Register all social media handles
+- Day 2: Set up Google Workspace emails
+- Day 3: Design logo (Fiverr: $50-200)
+- Day 4: Create app store screenshots (mockups)
+- Day 5: Write first 3 blog posts
+- Day 6: Film product demo video (2 minutes)
+- Day 7: Launch website (basic landing page)
+
+### Week 2: Content Creation
+- Day 8: Publish blog post #1 (CA compliance guide)
+- Day 10: Publish blog post #2 (FL compliance guide)
+- Day 12: Create Instagram account, first 3 posts
+- Day 14: Launch Facebook page, invite friends
+
+### Week 3: SEO & Outreach
+- Day 15: Submit to Google Search Console
+- Day 17: Publish blog post #3 (TX compliance guide)
+- Day 19: Post in landscaping Facebook groups (value, not spam)
+- Day 21: Email 50 beta tester prospects
+
+### Week 4: Launch Marketing Campaign
+- Day 22: Launch email outreach (via Instantly.ai)
+- Day 24: Publish blog post #4 (How to avoid fines)
+- Day 26: Post weekly on LinkedIn
+- Day 28: First paid Google Ad ($100 test budget)
+- Day 30: Review analytics, adjust strategy
+
+---
+
+## BUDGET BREAKDOWN (MONTHLY)
+
+**Required:**
+- Domain (fieldlog.pro): $25/year = $2/month
+- Google Workspace: $6/month
+- Hosting (Vercel): Free (or $20 if Pro)
+- Email automation (Instantly.ai): $37/month
+- Total: ~$45-65/month
+
+**Optional (Growth Phase):**
+- Google Ads: $200-500/month
+- Logo design: $50-200 (one-time)
+- Social media ads: $100-300/month
+- Email finder (Apollo.io): $79/month
+- Analytics (Hotjar): $39/month
+
+**Total Monthly (With Marketing):** $500-700/month
+
+---
+
+## NEXT STEPS (ACTION ITEMS)
+
+### TODAY:
+- [x] Domain registered: fieldlog.pro ✅
+- [ ] Register social media handles (@fieldlogpro)
+- [ ] Set up Google Workspace (hello@fieldlog.pro)
+- [ ] Order logo design (Fiverr or 99designs)
+
+### THIS WEEK:
+- [ ] Update website brief with fieldlog.pro branding
+- [ ] File LLC (Delaware or home state)
+- [ ] Open business bank account
+- [ ] Set up Google Analytics
+- [ ] Create basic landing page (Next.js)
+
+### THIS MONTH:
+- [ ] Build full marketing website
+- [ ] Write first 10 blog posts
+- [ ] Film product demo video
+- [ ] Create app store screenshots (mockups)
+- [ ] Launch beta program (first 10 customers)
+- [ ] Start email outreach campaign
+
+---
+
+## FINAL NOTES
+
+**The .pro domain is great because:**
+✅ Emphasizes "professional" positioning
+✅ Shorter than fieldlogpro.com alternatives
+✅ Premium feel (.pro = professional)
+✅ Available at good price
+✅ Memorable and brandable
+
+**Branding tip:**
+Always use "FieldLog Pro" (capital F, capital L, capital P) in official contexts.
+In casual conversation: "FieldLog" is fine.
+
+**Domain alternatives you also own:**
+If you grabbed others (like .io or .com variants), set up redirects:
+- getfieldlog.com → fieldlog.pro
+- fieldlogpro.io → fieldlog.pro
+- usefieldlog.com → fieldlog.pro
+
+This captures typos and alternative searches.
+
+---
+
+**You're ready to build!** 
+
+Next step: Hand the website brief to Claude Code and start building 
+the marketing site at fieldlog.pro.
+

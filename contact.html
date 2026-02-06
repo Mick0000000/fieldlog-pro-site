@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | FieldLog Pro</title>
+    <meta name="description" content="Get in touch with FieldLog Pro. Questions about our pesticide logging software? We're here to help.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%232ECC71'/><path d='M16 6L10 14h12L16 6z' fill='white'/><rect x='14' y='14' width='4' height='12' fill='white'/></svg>">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --green-primary: #2ECC71;
+            --green-dark: #27AE60;
+            --green-light: #A8E6CF;
+            --gray-900: #2C3E50;
+            --gray-700: #34495E;
+            --gray-500: #7F8C8D;
+            --gray-300: #BDC3C7;
+            --gray-100: #ECF0F1;
+            --gray-50: #F8FAFB;
+            --white: #FFFFFF;
+            --shadow-md: 0 4px 12px rgba(44, 62, 80, 0.08);
+            --shadow-lg: 0 12px 40px rgba(44, 62, 80, 0.12);
+            --radius-sm: 6px;
+            --radius-md: 10px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--gray-900);
+            line-height: 1.6;
+            background: var(--white);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(44, 62, 80, 0.06);
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--gray-900);
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--green-primary);
+            border-radius: var(--radius-sm);
+            position: relative;
+        }
+
+        .logo-icon::before {
+            content: '';
+            position: absolute;
+            top: 6px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-bottom: 10px solid white;
+        }
+
+        .logo-icon::after {
+            content: '';
+            position: absolute;
+            bottom: 4px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 6px;
+            height: 14px;
+            background: white;
+            border-radius: 1px;
+        }
+
+        .logo-text {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        .logo-text span {
+            color: var(--green-primary);
+        }
+
+        .nav-cta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 24px;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 600;
+            font-size: 0.938rem;
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-ghost {
+            color: var(--gray-700);
+            background: transparent;
+        }
+
+        .btn-ghost:hover {
+            color: var(--gray-900);
+            background: var(--gray-100);
+        }
+
+        .btn-primary {
+            color: white;
+            background: var(--green-primary);
+            box-shadow: 0 2px 8px rgba(46, 204, 113, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: var(--green-dark);
+            transform: translateY(-1px);
+        }
+
+        .btn-large {
+            padding: 16px 32px;
+            font-size: 1rem;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 160px 0 80px;
+            background: linear-gradient(180deg, var(--gray-50) 0%, var(--white) 100%);
+            text-align: center;
+        }
+
+        .hero-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(46, 204, 113, 0.1);
+            color: var(--green-dark);
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            color: var(--gray-900);
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--gray-500);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 0 120px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .contact-info h2 {
+            font-size: 1.75rem;
+            color: var(--gray-900);
+            margin-bottom: 32px;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 32px;
+            padding: 24px;
+            background: var(--gray-50);
+            border-radius: var(--radius-lg);
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background: var(--white);
+            box-shadow: var(--shadow-md);
+        }
+
+        .contact-icon {
+            width: 56px;
+            height: 56px;
+            background: var(--green-light);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .contact-text h3 {
+            font-size: 1.125rem;
+            color: var(--gray-900);
+            margin-bottom: 4px;
+        }
+
+        .contact-text a {
+            color: var(--green-primary);
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .contact-text a:hover {
+            color: var(--green-dark);
+        }
+
+        .contact-text p {
+            color: var(--gray-500);
+            font-size: 0.938rem;
+            margin-top: 4px;
+        }
+
+        .contact-form-wrapper {
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            padding: 48px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--gray-100);
+        }
+
+        .contact-form-wrapper h2 {
+            font-size: 1.5rem;
+            color: var(--gray-900);
+            margin-bottom: 8px;
+        }
+
+        .contact-form-wrapper > p {
+            color: var(--gray-500);
+            margin-bottom: 32px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 0.938rem;
+            color: var(--gray-700);
+        }
+
+        .form-input,
+        .form-select,
+        .form-textarea {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid var(--gray-100);
+            border-radius: var(--radius-md);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1rem;
+            color: var(--gray-900);
+            transition: all 0.2s ease;
+            background: var(--white);
+        }
+
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--green-primary);
+            box-shadow: 0 0 0 4px rgba(46, 204, 113, 0.1);
+        }
+
+        .form-input::placeholder,
+        .form-textarea::placeholder {
+            color: var(--gray-300);
+        }
+
+        .form-textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        .form-select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%237F8C8D' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            padding-right: 48px;
+        }
+
+        .alert {
+            padding: 16px 20px;
+            border-radius: var(--radius-md);
+            margin-bottom: 24px;
+            display: none;
+        }
+
+        .alert.show {
+            display: block;
+        }
+
+        .alert-success {
+            background: rgba(46, 204, 113, 0.1);
+            color: var(--green-dark);
+            border: 1px solid rgba(46, 204, 113, 0.2);
+        }
+
+        /* FAQ Quick Links */
+        .faq-section {
+            padding: 80px 0;
+            background: var(--gray-50);
+        }
+
+        .faq-section .section-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .faq-section h2 {
+            font-size: 2rem;
+            color: var(--gray-900);
+            margin-bottom: 16px;
+        }
+
+        .faq-section > div > p {
+            color: var(--gray-500);
+            font-size: 1.125rem;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .faq-card {
+            background: var(--white);
+            padding: 32px;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            border: 1px solid var(--gray-100);
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .faq-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-4px);
+            border-color: transparent;
+        }
+
+        .faq-card-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, var(--green-primary) 0%, var(--green-dark) 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+        }
+
+        .faq-card h3 {
+            font-size: 1.125rem;
+            color: var(--gray-900);
+            margin-bottom: 8px;
+        }
+
+        .faq-card p {
+            font-size: 0.938rem;
+            color: var(--gray-500);
+        }
+
+        /* Footer */
+        .footer {
+            padding: 60px 0 40px;
+            background: var(--gray-900);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+
+        .footer-brand {
+            max-width: 280px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+
+        .footer-logo .logo-icon {
+            width: 32px;
+            height: 32px;
+        }
+
+        .footer-logo .logo-text {
+            color: white;
+            font-size: 1.125rem;
+        }
+
+        .footer-tagline {
+            font-size: 0.938rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .footer-column h4 {
+            font-size: 0.875rem;
+            font-weight: 700;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            font-size: 0.938rem;
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--green-primary);
+        }
+
+        .footer-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 32px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer-copyright {
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .footer-legal {
+            display: flex;
+            gap: 24px;
+        }
+
+        .footer-legal a {
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+        }
+
+        .footer-legal a:hover {
+            color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 120px 0 60px;
+            }
+
+            .contact {
+                padding: 60px 0 80px;
+            }
+
+            .contact-form-wrapper {
+                padding: 32px 24px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .faq-section {
+                padding: 60px 0;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="/" class="logo">
+                    <div class="logo-icon"></div>
+                    <span class="logo-text">Field<span>Log</span> Pro</span>
+                </a>
+
+                <div class="nav-cta">
+                    <a href="/login.html" class="btn btn-ghost">Log In</a>
+                    <a href="/signup.html" class="btn btn-primary">Start Free Trial</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <span class="hero-label">Contact Us</span>
+            <h1>We're Here to Help</h1>
+            <p>Have a question about FieldLog Pro? Our team typically responds within 24 hours.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Get in Touch</h2>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-text">
+                            <h3>General Inquiries</h3>
+                            <a href="mailto:hello@fieldlog.pro">hello@fieldlog.pro</a>
+                            <p>For general questions about FieldLog Pro</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">🛟</div>
+                        <div class="contact-text">
+                            <h3>Customer Support</h3>
+                            <a href="mailto:support@fieldlog.pro">support@fieldlog.pro</a>
+                            <p>Technical help and account issues</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">💼</div>
+                        <div class="contact-text">
+                            <h3>Sales & Enterprise</h3>
+                            <a href="mailto:sales@fieldlog.pro">sales@fieldlog.pro</a>
+                            <p>For teams of 10+ or custom solutions</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">🤝</div>
+                        <div class="contact-text">
+                            <h3>Partnerships</h3>
+                            <a href="mailto:partners@fieldlog.pro">partners@fieldlog.pro</a>
+                            <p>Integration and partnership opportunities</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <h2>Send Us a Message</h2>
+                    <p>Fill out the form and we'll get back to you shortly.</p>
+
+                    <div class="alert alert-success" id="success-alert">
+                        Thank you for your message! We'll get back to you within 24 hours.
+                    </div>
+
+                    <form id="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="first-name">First Name</label>
+                                <input type="text" id="first-name" name="firstName" class="form-input" placeholder="John" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="last-name">Last Name</label>
+                                <input type="text" id="last-name" name="lastName" class="form-input" placeholder="Smith" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email Address</label>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="john@company.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="company">Company Name</label>
+                            <input type="text" id="company" name="company" class="form-input" placeholder="Your Lawn Care LLC">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="topic">What can we help with?</label>
+                            <select id="topic" name="topic" class="form-select" required>
+                                <option value="">Select a topic</option>
+                                <option value="general">General Question</option>
+                                <option value="demo">Request a Demo</option>
+                                <option value="support">Technical Support</option>
+                                <option value="billing">Billing Question</option>
+                                <option value="enterprise">Enterprise Inquiry</option>
+                                <option value="partnership">Partnership Opportunity</option>
+                                <option value="feedback">Product Feedback</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="message">Message</label>
+                            <textarea id="message" name="message" class="form-textarea" placeholder="Tell us more about how we can help..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large" style="width: 100%;">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Quick Answers</h2>
+                <p>Find answers to common questions</p>
+            </div>
+
+            <div class="faq-grid">
+                <a href="/#faq" class="faq-card">
+                    <div class="faq-card-icon">❓</div>
+                    <h3>General FAQ</h3>
+                    <p>Common questions about FieldLog Pro</p>
+                </a>
+
+                <a href="/#pricing" class="faq-card">
+                    <div class="faq-card-icon">💰</div>
+                    <h3>Pricing & Plans</h3>
+                    <p>Subscription details and billing</p>
+                </a>
+
+                <a href="/#features" class="faq-card">
+                    <div class="faq-card-icon">⚡</div>
+                    <h3>Features</h3>
+                    <p>Learn what FieldLog Pro can do</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="logo-icon"></div>
+                        <span class="logo-text">Field<span>Log</span> Pro</span>
+                    </div>
+                    <p class="footer-tagline">Professional field logging for landscapers. Log smart. Stay compliant.</p>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="/#features">Features</a></li>
+                        <li><a href="/#pricing">Pricing</a></li>
+                        <li><a href="/#faq">FAQ</a></li>
+                        <li><a href="/signup.html">Free Trial</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="/about.html">About</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                        <li><a href="mailto:support@fieldlog.pro">Support</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:hello@fieldlog.pro">hello@fieldlog.pro</a></li>
+                        <li><a href="mailto:support@fieldlog.pro">support@fieldlog.pro</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2026 FieldLog Pro, Inc. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="/privacy.html">Privacy Policy</a>
+                    <a href="/terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const formData = {
+                firstName: document.getElementById('first-name').value,
+                lastName: document.getElementById('last-name').value,
+                email: document.getElementById('email').value,
+                company: document.getElementById('company').value,
+                topic: document.getElementById('topic').value,
+                message: document.getElementById('message').value
+            };
+
+            // TODO: Connect to backend API
+            console.log('Contact form submission:', formData);
+
+            // Show success message
+            document.getElementById('success-alert').classList.add('show');
+            this.reset();
+
+            // Scroll to success message
+            document.getElementById('success-alert').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+    </script>
+</body>
+</html>
